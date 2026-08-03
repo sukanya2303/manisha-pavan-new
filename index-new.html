@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Manisha & Pavan</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=telma@1,2,3,4,5,6&display=swap">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style-new.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Poiret+One&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicToggle" class="music-btn">🔊</button>
+
+    <section class="wedding-banner">
+
+        <img src="assets/family-desktop.png" class="banner-desktop" alt="">
+        <img src="assets/family.PNG" class="banner-mobile" alt="">
+
+        <div class="overlay"></div>
+
+        <div class="banner-content">
+
+            <!-- <div class="tag">
+            
+            <span>A Celebration of Love</span>
+        </div> -->
+
+            <div class="title-tag">
+                <p>We are getting married !</p>
+            </div>
+
+            <h1 class="hero-title">
+                Manisha <br>
+                &
+                <br>
+                Pavan
+            </h1>
+
+            <p class="hero-description">
+                Join us as we celebrate the beginning of our forever with
+                the people we love most.
+            </p>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="hero-divider"></div>
+
+        <!-- Bottom Glass Card -->
+        <div class="event-card">
+
+            <!-- <div class="venue-image">
+            <img src="assets/church.jpg" alt="">
+        </div> -->
+
+            <div class="venue-info">
+                <h4>Sea View Resort</h4>
+                <p>Karnataka, 576103</p>
+            </div>
+
+            <!-- <div class="event-date">
+            <span>13</span>
+            <small>December 2026</small>
+        </div> -->
+
+            <div class="g-map">
+                <!-- <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.3335661324036!2d74.7181514!3d13.329514699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1783267377726!5m2!1sen!2sin"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe> -->
+
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15529.334245264181!2d74.718151!3d13.329515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1785669873226!5m2!1sen!2sin" 
+            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15529.334245264181!2d74.718151!3d13.329515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1785669873226!5m2!1sen!2sin"
+                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- <section class="date-section">
+
+    </section> -->
+
+    <section class="scratch-section">
+
+        <div class="scratch-card">
+
+            <div class="hidden-content">
+
+                <p class="subtitle">Save the Date</p>
+
+                <h1>13 December, 2026</h1>
+
+                <!-- <p class="invite">Together with our families,<br>
+                we invite you to celebrate our wedding.
+            </p> -->
+
+                <!-- <div class="divider"></div> -->
+
+                <div class="countdown">
+                    <div>
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div>
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div>
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div>
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <canvas id="scratchCanvas"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- Programs of the day -->
+    <section class="programs">
+
+        <div class="programs-heading">
+            <h2>Here's how things<br>will unfold</h2>
+        </div>
+
+        <div class="timeline">
+
+            <!-- LEFT -->
+            <div class="timeline-item left">
+
+                <div class="timeline-images">
+                    <img src="assets/1.jpg">
+                </div>
+
+                <div class="content-programs">
+                    <h3>Sangeet</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, et.</p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item right">
+
+                <div class="content-programs">
+                    <h3>Wedding</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, libero.</p>
+                </div>
+
+                <div class="timeline-images">
+                    <img src="assets/1.jpg">
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        </div>
+
+    </section>
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- main -->
+    <script>
+        window.addEventListener("load", () => {
+
+            const tl = gsap.timeline();
+
+            // Hold sharp image
+            tl.to({}, { duration: 2 });
+
+            // Blur image
+            tl.to(".banner-desktop, .banner-mobile", {
+                filter: "blur(8px)",
+                duration: 5,
+                ease: "power2.inOut"
+            }, 0);
+
+            // Dark overlay
+            tl.to(".overlay", {
+                backgroundColor: "rgba(0,0,0,.28)",
+                duration: 1.5,
+                ease: "power2.out"
+            }, "-=1");
+
+            // Show text
+            tl.to(".banner-content", {
+                opacity: 1,
+                duration: 1
+            }, "-=0.4");
+
+            tl.from(".title-tag", {
+                y: 40,
+                opacity: 0,
+                duration: .8
+            });
+
+            tl.from(".hero-title", {
+                y: 80,
+                opacity: 0,
+                duration: 1
+            }, "-=0.5");
+
+            tl.from(".hero-description", {
+                y: 40,
+                opacity: 0,
+                duration: .8
+            }, "-=0.6");
+
+        });
+    </script>
+
+    <script>
+        const canvas = document.getElementById("scratchCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const card = document.querySelector(".scratch-card");
+
+        // Set canvas size
+        const rect = card.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+
+        let isDrawing = false;
+
+        // Load scratch texture
+        const cover = new Image();
+        cover.src = "assets/gold-textured.jpg";
+
+        cover.onload = () => {
+            console.log("Gold texture loaded!");
+
+            // Normal drawing mode
+            ctx.globalCompositeOperation = "source-over";
+
+            ctx.drawImage(cover, 0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#fff";
+            ctx.font = "700 36px 'Telma', cursive";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+
+            ctx.fillText(
+                "Scratch to Reveal",
+                canvas.width / 2,
+                canvas.height / 2
+            );
+        };
+
+        cover.onerror = () => {
+            console.error("Gold texture could not be loaded.");
+
+            // Fallback color
+            ctx.fillStyle = "#C89B3C";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#fff";
+            ctx.font = "700 36px 'Telma', cursive";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(
+                "Scratch to Reveal",
+                canvas.width / 2,
+                canvas.height / 2
+            );
+
+
+        };
+
+        function scratch(x, y) {
+            ctx.save();
+
+            ctx.globalCompositeOperation = "destination-out";
+
+            ctx.beginPath();
+            ctx.arc(x, y, 42, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        function getPosition(e) {
+            const rect = canvas.getBoundingClientRect();
+
+            if (e.touches) {
+                return {
+                    x: e.touches[0].clientX - rect.left,
+                    y: e.touches[0].clientY - rect.top
+                };
+            }
+
+            return {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            };
+        }
+
+        // Desktop
+        canvas.addEventListener("mousedown", () => isDrawing = true);
+
+        canvas.addEventListener("mouseup", () => {
+            isDrawing = false;
+            checkReveal();
+        });
+
+        canvas.addEventListener("mouseleave", () => isDrawing = false);
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (!isDrawing) return;
+
+            const pos = getPosition(e);
+            scratch(pos.x, pos.y);
+        });
+
+        // Mobile
+        canvas.addEventListener("touchstart", () => isDrawing = true);
+
+        canvas.addEventListener("touchend", () => {
+            isDrawing = false;
+            checkReveal();
+        });
+
+        canvas.addEventListener("touchmove", (e) => {
+            e.preventDefault();
+
+            if (!isDrawing) return;
+
+            const pos = getPosition(e);
+            scratch(pos.x, pos.y);
+
+        }, { passive: false });
+
+        function checkReveal() {
+
+            const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+            let transparent = 0;
+
+            for (let i = 3; i < pixels.length; i += 4) {
+                if (pixels[i] === 0) transparent++;
+            }
+
+            const percent = (transparent / (canvas.width * canvas.height)) * 100;
+
+            if (percent > 60) {
+
+                fireConfetti();   // <-- Add this
+
+                canvas.style.transition = "opacity .7s ease, transform .7s ease";
+                canvas.style.transform = "scale(.05)";
+                canvas.style.opacity = "0";
+
+                card.classList.add("celebrate");
+
+                setTimeout(() => {
+                    canvas.remove();
+                }, 700);
+            }
+        }
+        function fireConfetti() {
+
+            const rect = card.getBoundingClientRect();
+
+            const leftX = rect.left / window.innerWidth;
+            const rightX = rect.right / window.innerWidth;
+            const centerY = (rect.top + rect.height / 2) / window.innerHeight;
+
+            confetti({
+                particleCount: 140,
+                spread: 80,
+                angle: 60,
+                startVelocity: 60,
+                origin: {
+                    x: leftX,
+                    y: centerY
+                }
+            });
+
+            confetti({
+                particleCount: 140,
+                spread: 80,
+                angle: 120,
+                startVelocity: 60,
+                origin: {
+                    x: rightX,
+                    y: centerY
+                }
+            });
+        }
+
+        // Wedding date
+        const weddingDate = new Date("December 13, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                clearInterval(timer);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) /
+                (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) /
+                (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60)) /
+                1000
+            );
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        // Run immediately
+        updateCountdown();
+
+        // Update every second
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
