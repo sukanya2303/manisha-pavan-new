@@ -35,7 +35,7 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" loop autoplay preload="auto">
+    <audio id="bgMusic" autoplay loop preload="auto">
         <source src="assets/bg-music.mp3" type="audio/mpeg">
     </audio>
     <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
@@ -326,17 +326,20 @@
 
     <!-- Bg music -->
     <script>
-        const bgMusic = document.getElementById("bgMusic");
+        document.addEventListener("DOMContentLoaded", function () {
 
-        bgMusic.volume = 0.5;
+            const bgMusic = document.getElementById("bgMusic");
 
-        window.addEventListener("load", async () => {
-            try {
-                await bgMusic.play();
-                console.log("Music started automatically");
-            } catch (error) {
-                console.log("Autoplay blocked:", error);
-            }
+            bgMusic.volume = 0.5;
+
+            bgMusic.play()
+                .then(() => {
+                    console.log("Music started");
+                })
+                .catch((error) => {
+                    console.log("Autoplay blocked by browser:", error);
+                });
+
         });
     </script>
 
@@ -736,7 +739,7 @@
 
             const title = document.querySelector("#rsvp-title");
 
-            const text1 = "Confirm Your Attendance";
+            const text1 = "We’d love to celebrate with you.";
             // const text2 = "";
 
             let i = 0;
