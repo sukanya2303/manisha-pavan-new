@@ -342,7 +342,7 @@ body {
    MOBILE
 =========================== */
 
-@media (max-width:456px) {
+@media (min-width: 320px) and (max-width:456px) {
 
     .wedding-banner {
         height: 100svh;
