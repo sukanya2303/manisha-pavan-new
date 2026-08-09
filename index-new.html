@@ -35,15 +35,16 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" loop autoplay>
         <source src="assets/bg-music.mp3" type="audio/mpeg">
     </audio>
     <button id="musicToggle" class="music-btn">🔊</button>
 
     <section class="wedding-banner">
 
-        <img src="assets/family-desktop.png" class="banner-desktop" alt="">
-        <img src="assets/family.PNG" class="banner-mobile" alt="">
+        <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262499/family-desktop.png"
+            class="banner-desktop" alt="">
+        <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786269376/famil.jpg" class="banner-mobile" alt="">
 
         <div class="overlay"></div>
 
@@ -93,13 +94,6 @@
         </div> -->
 
             <div class="g-map">
-                <!-- <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.3335661324036!2d74.7181514!3d13.329514699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1783267377726!5m2!1sen!2sin"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe> -->
-
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15529.334245264181!2d74.718151!3d13.329515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1785669873226!5m2!1sen!2sin" 
-            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15529.334245264181!2d74.718151!3d13.329515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1785669873226!5m2!1sen!2sin"
@@ -165,48 +159,183 @@
     <section class="programs">
 
         <div class="programs-heading">
-            <h2>Here's how things<br>will unfold</h2>
+            <h2 id="programs-title">Here's how things<br>will unfold</h2>
         </div>
 
-        <div class="timeline">
+        <div class="programs-timeline">
 
-            <!-- LEFT -->
-            <div class="timeline-item left">
+            <!-- =======================
+                PROGRAM 01
+            ======================== -->
+            <article class="program-item">
 
-                <div class="timeline-images">
-                    <img src="assets/1.jpg">
+                <div class="program-media" data-aos="fade-right">
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262449/sangeet.png"
+                        alt="Designing solutions">
                 </div>
 
-                <div class="content-programs">
-                    <h3>Sangeet</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, et.</p>
+                <div class="program-content">
+
+                    <!-- <span class="program-label">WHO WE ARE</span> -->
+
+                    <h3>
+                        Sundowner Soirée
+                    </h3>
+
+                    <p>
+                        Join us for an evening of mehendi, music, dance, laughter, and unforgettable moments as we
+                        celebrate together beneath the setting sun.
+                    </p>
+
+                    <a href="#" class="program-link">
+                        <span>11 December 2026</span>
+                        <!-- <span class="arrow">→</span> -->
+                    </a>
+
                 </div>
 
-            </div>
+            </article>
 
-            <div class="timeline-item right">
 
-                <div class="content-programs">
-                    <h3>Wedding</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, libero.</p>
+            <!-- =======================
+                PROGRAM 02
+            ======================== -->
+            <article class="program-item reverse">
+
+                <div class="program-media" data-aos="fade-left">
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262448/wedding.png"
+                        alt="Turning ideas into experiences">
                 </div>
 
-                <div class="timeline-images">
-                    <img src="assets/1.jpg">
+                <div class="program-content">
+
+                    <!-- <span class="program-label">OUR JOURNEY</span> -->
+
+                    <h3>
+                        The Sacred Vows
+                    </h3>
+
+                    <p>
+                        With the blessings of our families, we invite you to witness the beginning of our forever as we
+                        exchange our sacred vows.
+                    </p>
+
+                    <a href="#" class="program-link">
+                        <span>13 December 2026</span>
+                        <!-- <span class="arrow">→</span> -->
+                    </a>
+
                 </div>
 
-            </div>
-
-
-
-        </div>
+            </article>
 
         </div>
 
     </section>
+
+    <section class="couple-photo">
+        <div class="c-img">
+            <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262506/couple.png" alt="couple-img">
+
+            <div class="falling-flowers">
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="rsvp">
+        <div class="container">
+            <h2 id="rsvp-title">
+                Confirm your attendance
+            </h2>
+            <p>We hope to have you join us.</p>
+        </div>
+    </div>
+    <form id="rsvpForm">
+        <input name="full_name" required placeholder="Full name" />
+        <input name="email" placeholder="Email (optional)" />
+
+
+        <p>Will you attend? *</p>
+        <label>
+            <input type="radio" name="attending" value="yes" checked> Yes, I will attend.
+        </label>
+        <label>
+            <input type="radio" name="attending" value="no"> I will not be able to attend
+        </label>
+
+        <p>Number of guests (including you):</p>
+        <input type="number" name="guests" value="1" min="1" />
+
+        <textarea name="allergies" placeholder="Allergies or Restrictions"></textarea>
+
+        <textarea name="message" placeholder="Message for the bride and groom (optional)"></textarea>
+
+        <button>Send Confirmation</button>
+        <p id="response"></p>
+    </form>
+
+    <!-- closing line -->
+    <div class="closing-line">
+        <p id="closingText">
+            With all our love,<br>
+            we invite you to be part of our forever.
+        </p>
+    </div>
+
+
     <!-- Javascript -->
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: false     // Set to false so it fades out when scrolling away
+        });
+    </script>
+
+    <!-- Bg music -->
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        const musicToggle = document.getElementById("musicToggle");
+
+        let isPlaying = false;
+
+        musicToggle.addEventListener("click", () => {
+
+            if (isPlaying) {
+
+                bgMusic.pause();
+
+                musicToggle.textContent = "🔇";
+                musicToggle.classList.remove("playing");
+
+                isPlaying = false;
+
+            } else {
+
+                bgMusic.play();
+
+                musicToggle.textContent = "🔊";
+                musicToggle.classList.add("playing");
+
+                isPlaying = true;
+
+            }
+
+        });
+    </script>
 
     <!-- main -->
     <script>
@@ -214,50 +343,99 @@
 
             const tl = gsap.timeline();
 
-            // Hold sharp image
-            tl.to({}, { duration: 2 });
+            /* =========================================
+               1. HOLD SHARP IMAGE
+            ========================================= */
 
-            // Blur image
-            tl.to(".banner-desktop, .banner-mobile", {
-                filter: "blur(8px)",
-                duration: 5,
-                ease: "power2.inOut"
-            }, 0);
-
-            // Dark overlay
-            tl.to(".overlay", {
-                backgroundColor: "rgba(0,0,0,.28)",
-                duration: 1.5,
-                ease: "power2.out"
-            }, "-=1");
-
-            // Show text
-            tl.to(".banner-content", {
-                opacity: 1,
-                duration: 1
-            }, "-=0.4");
-
-            tl.from(".title-tag", {
-                y: 40,
-                opacity: 0,
-                duration: .8
+            tl.to({}, {
+                duration: 2
             });
 
-            tl.from(".hero-title", {
-                y: 80,
+
+            /* =========================================
+               2. BLUR + DARKEN IMAGE
+            ========================================= */
+
+            tl.to(".banner-desktop, .banner-mobile", {
+                filter: "blur(8px)",
+                scale: 1.04,
+                duration: 3,
+                ease: "power2.inOut"
+            });
+
+            tl.to(".overlay", {
+                backgroundColor: "rgba(0,0,0,0.25)",
+                duration: 2,
+                ease: "power2.out"
+            }, "<");
+
+
+            /* =========================================
+               3. SHOW TITLE
+            ========================================= */
+
+            tl.to(".banner-content", {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+
+
+            /* Small heading */
+
+            tl.from(".title-tag", {
+                y: 30,
                 opacity: 0,
-                duration: 1
-            }, "-=0.5");
+                duration: 0.7,
+                ease: "power3.out"
+            }, "-=0.4");
+
+
+            /* Main title */
+
+            tl.from(".hero-title", {
+                y: 70,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            }, "-=0.3");
+
+
+            /* Description */
 
             tl.from(".hero-description", {
-                y: 40,
+                y: 30,
                 opacity: 0,
-                duration: .8
+                duration: 0.8,
+                ease: "power2.out"
             }, "-=0.6");
+
+
+            /* =========================================
+               4. DIVIDER
+            ========================================= */
+
+            tl.to(".hero-divider", {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            }, "-=0.3");
+
+
+            /* =========================================
+               5. EVENT CARD
+            ========================================= */
+
+            tl.to(".event-card", {
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out"
+            }, "-=0.2");
 
         });
     </script>
 
+    <!-- Scrath Card -->
     <script>
         const canvas = document.getElementById("scratchCanvas");
         const ctx = canvas.getContext("2d");
@@ -488,6 +666,194 @@
 
         // Update every second
         const timer = setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- Programs -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const title = document.querySelector("#programs-title");
+
+            const text1 = "Here's how things";
+            const text2 = "will unfold";
+
+            let i = 0;
+            let j = 0;
+
+            title.innerHTML = "";
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    title.classList.add("typing");
+
+                    const line1 = document.createElement("span");
+                    const line2 = document.createElement("span");
+
+                    title.appendChild(line1);
+                    title.appendChild(document.createElement("br"));
+                    title.appendChild(line2);
+
+                    function typeLine1() {
+                        if (i < text1.length) {
+                            line1.textContent += text1.charAt(i);
+                            i++;
+                            setTimeout(typeLine1, 70);
+                        } else {
+                            setTimeout(typeLine2, 150);
+                        }
+                    }
+
+                    function typeLine2() {
+                        if (j < text2.length) {
+                            line2.textContent += text2.charAt(j);
+                            j++;
+                            setTimeout(typeLine2, 70);
+                        }
+                    }
+
+                    typeLine1();
+
+                    observer.unobserve(title);
+                }
+
+            }, {
+                threshold: 0.3
+            });
+
+            observer.observe(title);
+
+        });
+    </script>
+
+    <!-- RSVP -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const title = document.querySelector("#rsvp-title");
+
+            const text1 = "Confirm Your Attendance";
+            // const text2 = "";
+
+            let i = 0;
+            let j = 0;
+
+            title.innerHTML = "";
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    title.classList.add("typing");
+
+                    const line1 = document.createElement("span");
+                    const line2 = document.createElement("span");
+
+                    title.appendChild(line1);
+                    title.appendChild(document.createElement("br"));
+                    title.appendChild(line2);
+
+                    function typeLine1() {
+                        if (i < text1.length) {
+                            line1.textContent += text1.charAt(i);
+                            i++;
+                            setTimeout(typeLine1, 70);
+                        } else {
+                            setTimeout(typeLine2, 150);
+                        }
+                    }
+
+                    function typeLine2() {
+                        if (j < text2.length) {
+                            line2.textContent += text2.charAt(j);
+                            j++;
+                            setTimeout(typeLine2, 70);
+                        }
+                    }
+
+                    typeLine1();
+
+                    observer.unobserve(title);
+                }
+
+            }, {
+                threshold: 0.3
+            });
+
+            observer.observe(title);
+
+        });
+    </script>
+
+    <!-- closing Text -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const text = document.querySelector("#closingText");
+
+            const line1 = "With all our love,";
+            const line2 = "we invite you to be part of our forever.";
+
+            let i = 0;
+            let j = 0;
+
+            text.innerHTML = "";
+
+            const firstLine = document.createElement("span");
+            const secondLine = document.createElement("span");
+
+            text.appendChild(firstLine);
+            text.appendChild(document.createElement("br"));
+            text.appendChild(secondLine);
+
+            function typeFirstLine() {
+
+                if (i < line1.length) {
+                    firstLine.textContent += line1.charAt(i);
+                    i++;
+
+                    setTimeout(typeFirstLine, 65);
+
+                } else {
+
+                    setTimeout(typeSecondLine, 250);
+
+                }
+            }
+
+
+            function typeSecondLine() {
+
+                if (j < line2.length) {
+                    secondLine.textContent += line2.charAt(j);
+                    j++;
+
+                    setTimeout(typeSecondLine, 55);
+                }
+
+            }
+
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    text.classList.add("typing");
+
+                    typeFirstLine();
+
+                    observer.unobserve(text);
+                }
+
+            }, {
+                threshold: 0.4
+            });
+
+
+            observer.observe(text);
+
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
