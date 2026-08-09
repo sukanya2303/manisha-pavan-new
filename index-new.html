@@ -35,9 +35,9 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" controls preload="auto">
-        <source src="bg-music.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bgMusic" autoplay loop preload="auto">
+    <source src="assets/bg-music.mp3" type="audio/mpeg">
+</audio>
     <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
 
     <section class="wedding-banner">
@@ -221,7 +221,7 @@
             <article class="program-item reverse">
 
                 <div class="program-media" data-aos="fade-left">
-                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786273292/wedding.png"
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786278538/wedding.png"
                         alt="Turning ideas into experiences">
                 </div>
 
@@ -326,17 +326,18 @@
 
     <!-- Bg music -->
     <script>
-const music = document.getElementById("bgMusic");
+const bgMusic = document.getElementById("bgMusic");
 
-console.log("Audio:", music);
-console.log("Source:", music.currentSrc);
+bgMusic.volume = 0.5;
 
-music.addEventListener("canplaythrough", () => {
-    console.log("MP3 loaded successfully");
-});
-
-music.addEventListener("error", () => {
-    console.log("AUDIO ERROR:", music.error);
+window.addEventListener("load", () => {
+    bgMusic.play()
+        .then(() => {
+            console.log("Music autoplayed");
+        })
+        .catch(err => {
+            console.log("Autoplay blocked:", err);
+        });
 });
 </script>
 
