@@ -35,7 +35,7 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" loop preload="auto">
+    <audio id="bgMusic" autoplay loop preload="auto">
     <source src="bg-music.mp3" type="audio/mpeg">
 </audio>
     <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
@@ -326,21 +326,19 @@
 
     <!-- Bg music -->
     <script>
-const bgMusic = document.getElementById("bgMusic");
+const music = document.getElementById("bgMusic");
 
-bgMusic.volume = 0.5;
+music.volume = 0.5;
 
-function startMusic() {
-    bgMusic.play().catch(() => {});
-    
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
-    document.removeEventListener("scroll", startMusic);
-}
-
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
-document.addEventListener("scroll", startMusic);
+window.addEventListener("load", () => {
+    music.play()
+        .then(() => {
+            console.log("AUTOPLAY SUCCESS");
+        })
+        .catch((error) => {
+            console.log("AUTOPLAY BLOCKED:", error);
+        });
+});
 </script>
 
     <!-- main -->
