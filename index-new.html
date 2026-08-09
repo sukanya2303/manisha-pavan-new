@@ -310,28 +310,33 @@
         const bgMusic = document.getElementById("bgMusic");
         const musicToggle = document.getElementById("musicToggle");
 
-        let isPlaying = false;
+        // Try to start music when website loads
+        window.addEventListener("load", () => {
+            bgMusic.volume = 0.5;
 
+            bgMusic.play()
+                .then(() => {
+                    musicToggle.textContent = "🔊";
+                    musicToggle.classList.add("playing");
+                })
+                .catch(() => {
+                    // Browser blocked autoplay
+                    musicToggle.textContent = "🔇";
+                });
+        });
+
+
+        // Toggle music
         musicToggle.addEventListener("click", () => {
 
-            if (isPlaying) {
-
-                bgMusic.pause();
-
-                musicToggle.textContent = "🔇";
-                musicToggle.classList.remove("playing");
-
-                isPlaying = false;
-
-            } else {
-
+            if (bgMusic.paused) {
                 bgMusic.play();
-
                 musicToggle.textContent = "🔊";
                 musicToggle.classList.add("playing");
-
-                isPlaying = true;
-
+            } else {
+                bgMusic.pause();
+                musicToggle.textContent = "🔇";
+                musicToggle.classList.remove("playing");
             }
 
         });
