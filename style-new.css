@@ -342,7 +342,7 @@ body {
    MOBILE
 =========================== */
 
-@media (min-width: 320px) and (max-width:456px) {
+@media (max-width:456px) {
 
     .wedding-banner {
         height: 100svh;
@@ -379,7 +379,7 @@ body {
 
     .hero-description {
         /* width:85%; */
-        margin-top: 25px;
+        margin-top: 35px;
         font-size: 15px;
     }
 
@@ -389,11 +389,11 @@ body {
 
     .event-card {
 
-        width: calc(100% - 22px);
+        width: calc(100% - 32px);
 
         flex-direction: column;
 
-        bottom: 10px;
+        bottom: 20px;
 
         text-align: center;
 
