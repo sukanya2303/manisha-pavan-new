@@ -35,9 +35,9 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" autoplay loop preload="auto">
-    <source src="bg-music.mp3" type="audio/mpeg">
-</audio>
+    <audio id="bgMusic" controls preload="auto">
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
     <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
 
     <section class="wedding-banner">
@@ -328,16 +328,15 @@
     <script>
 const music = document.getElementById("bgMusic");
 
-music.volume = 0.5;
+console.log("Audio:", music);
+console.log("Source:", music.currentSrc);
 
-window.addEventListener("load", () => {
-    music.play()
-        .then(() => {
-            console.log("AUTOPLAY SUCCESS");
-        })
-        .catch((error) => {
-            console.log("AUTOPLAY BLOCKED:", error);
-        });
+music.addEventListener("canplaythrough", () => {
+    console.log("MP3 loaded successfully");
+});
+
+music.addEventListener("error", () => {
+    console.log("AUDIO ERROR:", music.error);
 });
 </script>
 
