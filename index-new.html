@@ -35,10 +35,10 @@
 
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" loop autoplay>
+    <audio id="bgMusic" loop autoplay preload="auto">
         <source src="assets/bg-music.mp3" type="audio/mpeg">
     </audio>
-    <button id="musicToggle" class="music-btn">🔊</button>
+    <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
 
     <section class="wedding-banner">
 
@@ -52,18 +52,34 @@
 
             <!-- <div class="tag">
             
-            <span>A Celebration of Love</span>
-        </div> -->
+                <span>A Celebration of Love</span>
+            </div> -->
 
             <div class="title-tag">
                 <p>We are getting married !</p>
             </div>
 
-            <h1 class="hero-title">
+            <!-- <h1 class="hero-title">
                 Manisha <br>
                 &
                 <br>
                 Pavan
+            </h1> -->
+
+            <h1 class="hero-title">
+
+                <span class="name-block">
+                    Manisha
+                    <small>D.O Shambhavi & Vasant Shetty</small>
+                </span>
+
+                <span class="ampersand">&</span>
+
+                <span class="name-block">
+                    Pavan
+                    <small>S.O Shashikala & Jayaram Shetty</small>
+                </span>
+
             </h1>
 
             <p class="hero-description">
@@ -170,7 +186,7 @@
             <article class="program-item">
 
                 <div class="program-media" data-aos="fade-right">
-                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262449/sangeet.png"
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786274135/sangeet-new.png"
                         alt="Designing solutions">
                 </div>
 
@@ -186,6 +202,8 @@
                         Join us for an evening of mehendi, music, dance, laughter, and unforgettable moments as we
                         celebrate together beneath the setting sun.
                     </p>
+
+                    <span class="dc">Dresscode: Shimmer & Shine</span>
 
                     <a href="#" class="program-link">
                         <span>11 December 2026</span>
@@ -203,7 +221,7 @@
             <article class="program-item reverse">
 
                 <div class="program-media" data-aos="fade-left">
-                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262448/wedding.png"
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786273292/wedding.png"
                         alt="Turning ideas into experiences">
                 </div>
 
@@ -219,6 +237,8 @@
                         With the blessings of our families, we invite you to witness the beginning of our forever as we
                         exchange our sacred vows.
                     </p>
+
+                    <span class="dc">Dresscode: Full South Scene</span>
 
                     <a href="#" class="program-link">
                         <span>13 December 2026</span>
@@ -257,9 +277,9 @@
     <div class="rsvp">
         <div class="container">
             <h2 id="rsvp-title">
-                Confirm your attendance
+                We’d love to celebrate with you
             </h2>
-            <p>We hope to have you join us.</p>
+            <p>Kindly let us know if you’ll be joining us.</p>
         </div>
     </div>
     <form id="rsvpForm">
@@ -289,8 +309,7 @@
     <!-- closing line -->
     <div class="closing-line">
         <p id="closingText">
-            With all our love,<br>
-            we invite you to be part of our forever.
+            See you there. <br> Don’t be late.
         </p>
     </div>
 
@@ -308,37 +327,16 @@
     <!-- Bg music -->
     <script>
         const bgMusic = document.getElementById("bgMusic");
-        const musicToggle = document.getElementById("musicToggle");
 
-        // Try to start music when website loads
-        window.addEventListener("load", () => {
-            bgMusic.volume = 0.5;
+        bgMusic.volume = 0.5;
 
-            bgMusic.play()
-                .then(() => {
-                    musicToggle.textContent = "🔊";
-                    musicToggle.classList.add("playing");
-                })
-                .catch(() => {
-                    // Browser blocked autoplay
-                    musicToggle.textContent = "🔇";
-                });
-        });
-
-
-        // Toggle music
-        musicToggle.addEventListener("click", () => {
-
-            if (bgMusic.paused) {
-                bgMusic.play();
-                musicToggle.textContent = "🔊";
-                musicToggle.classList.add("playing");
-            } else {
-                bgMusic.pause();
-                musicToggle.textContent = "🔇";
-                musicToggle.classList.remove("playing");
+        window.addEventListener("load", async () => {
+            try {
+                await bgMusic.play();
+                console.log("Music started automatically");
+            } catch (error) {
+                console.log("Autoplay blocked:", error);
             }
-
         });
     </script>
 
@@ -797,8 +795,8 @@
 
             const text = document.querySelector("#closingText");
 
-            const line1 = "With all our love,";
-            const line2 = "we invite you to be part of our forever.";
+            const line1 = "See you there.";
+            const line2 = "Don’t be late.";
 
             let i = 0;
             let j = 0;

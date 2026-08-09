@@ -102,7 +102,7 @@ body {
     max-width: 1280px;
     height: 100%;
     margin: auto;
-    padding: 70px 6%;
+    padding: 40px 6%;
 
     opacity: 0;
 }
@@ -131,14 +131,50 @@ body {
 
 /* Title */
 
+/* .hero-title {
+    font-family: 'Telma', cursive;
+    font-size: clamp(70px, 7vw, 110px);
+    line-height: .95;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+} */
+
 .hero-title {
     font-family: 'Telma', cursive;
     font-size: clamp(70px, 7vw, 110px);
     line-height: .95;
     font-weight: 400;
-    /* max-width:720px; */
     text-align: center;
     color: #fff;
+}
+
+.name-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-block small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: "Crimson", serif;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    /* letter-spacing: 1px; */
+
+    color: #f0ebe2;
+}
+
+.ampersand {
+    display: block;
+
+    margin: 10px 0;
+
+    font-family: 'Telma', cursive;
 }
 
 /* Right Text */
@@ -152,7 +188,7 @@ body {
     font-size:18px;
     line-height:1.6; */
 
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     font-size: 24px;
     color: #fff;
@@ -326,7 +362,7 @@ body {
     }
 
     .banner-content {
-        padding: 40px 24px;
+        padding: 30px 24px;
     }
 
     .tag {
@@ -338,13 +374,13 @@ body {
     .hero-title {
         font-size: clamp(46px, 12vw, 70px);
         max-width: 100%;
-        margin: 40px 0;
+        /* margin: 40px 0; */
     }
 
     .hero-description {
         /* width:85%; */
         margin-top: 25px;
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .hero-divider {
@@ -353,11 +389,11 @@ body {
 
     .event-card {
 
-        width: calc(100% - 32px);
+        width: calc(100% - 22px);
 
         flex-direction: column;
 
-        bottom: 20px;
+        bottom: 10px;
 
         text-align: center;
 
@@ -373,10 +409,13 @@ body {
 
     .venue-info {
 
-        padding: 20px;
+        padding: 10px;
 
     }
-
+    .venue-info p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
     .event-date {
 
         width: 100%;
@@ -774,7 +813,7 @@ canvas {
 .program-content p {
     max-width: 470px;
 
-    margin: 0 0 45px;
+    margin: 0 0 15px;
 
     font-family: "Gambarino", serif;
     font-size: 17px;
@@ -783,7 +822,12 @@ canvas {
 
     color: #444;
 }
-
+.program-content .dc {
+    font-family: "Gambarino", serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 10px 0;
+}
 
 /* =========================================
    LINK
