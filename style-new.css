@@ -338,7 +338,7 @@ body {
     .hero-title {
         font-size: clamp(46px, 12vw, 70px);
         max-width: 100%;
-        margin: 50px 0;
+        margin: 40px 0;
     }
 
     .hero-description {
